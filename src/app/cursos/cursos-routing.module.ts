@@ -7,21 +7,21 @@ import { CursosComponent } from './cursos.component';
 
 const routes: Routes = [
   {
-    path: 'cursos',
+    path: '',
     component: CursosComponent
-  },
-  {
-    path: 'curso/:id',
-    component: CursoDetalheComponent
   },
   {
     path: 'naoEncontrado',
     component: CursoNaoEncontradoComponent
   },
+  {
+    path: ':id',
+    component: CursoDetalheComponent
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class CursosRoutingModule { }
