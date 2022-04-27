@@ -12,8 +12,9 @@ export class AlunosGuard implements CanActivateChild {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean>|Promise<boolean>|boolean {
-    console.log(route)
-    console.log(state)
+    // console.log(route)
+    // console.log(state)
+    console.log('AlunosGuard: Guarda de rota filha')
 
     // if (state.url.includes('editar')) {
     //   this.toastr.error("Usuário não tem permissão!","Não é possível editar",{
