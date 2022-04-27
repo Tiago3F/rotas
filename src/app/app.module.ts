@@ -1,4 +1,6 @@
-import { AuthGuard } from './guards/auth-guard';
+import { AlunosGuard } from './guards/alunos.guard';
+import { CursosGuard } from './guards/cursos.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { FormsModule } from '@angular/forms';
 // import { AlunosModule } from './alunos/alunos.module';
 // import { CursosModule } from './cursos/cursos.module';
@@ -40,7 +42,9 @@ import { CustomToastComponent } from './custom-toast/custom-toast.component';
   ],
   providers: [
      AuthService,
-     AuthGuard
+     AuthGuard,
+     CursosGuard,
+     AlunosGuard
   ],
   bootstrap: [AppComponent]
 })

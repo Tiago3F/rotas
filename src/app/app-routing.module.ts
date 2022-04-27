@@ -1,6 +1,8 @@
+import { AlunosGuard } from './guards/alunos.guard';
+import { CursosGuard } from './guards/cursos.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, CanActivate } from '@angular/router';
-import { AuthGuard } from './guards/auth-guard';
+import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
@@ -8,12 +10,14 @@ const routes: Routes = [
   {
     path: 'cursos',
     loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule),
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    canActivateChild: [CursosGuard]
   },
   {
     path: 'alunos',
     loadChildren: () => import('./alunos/alunos.module').then(m => m.AlunosModule),
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    canActivateChild: [AlunosGuard]
   },
   {
     path: '',
