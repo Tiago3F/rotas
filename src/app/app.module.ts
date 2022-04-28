@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { CustomToastComponent } from './custom-toast/custom-toast.component';
+import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { CustomToastComponent } from './custom-toast/custom-toast.component';
     HomeComponent,
     LoginComponent,
     CustomToastComponent,
+    PaginaNaoEncontradaComponent,
 
   ],
   imports: [
