@@ -31,6 +31,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: '',
+    redirectTo: '/home', pathMatch: 'full'
+  },
+  {
     path: '**',
     component: PaginaNaoEncontradaComponent
   },
